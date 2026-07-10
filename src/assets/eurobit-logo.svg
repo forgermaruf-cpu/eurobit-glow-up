@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Eurobit logo</title>
+  <desc id="desc">Eurobit wordmark in navy and orange on a transparent background.</desc>
+  <g transform="translate(40,40)">
+    <text x="0" y="190"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="220"
+          font-weight="700"
+          letter-spacing="-12"
+          fill="#0A1F44">euro</text>
+
+    <text x="488" y="190"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="220"
+          font-weight="700"
+          letter-spacing="-12"
+          fill="#F68B1F">b</text>
+
+    <text x="620" y="190"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="220"
+          font-weight="700"
+          letter-spacing="-12"
+          fill="#0A1F44">it</text>
+
+    <circle cx="695" cy="18" r="16" fill="#F68B1F"/>
+
+    <text x="835" y="55"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="38"
+          font-weight="700"
+          fill="#0A1F44">®</text>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Facebook, Youtube } from "lucide-react";
+import { Logo } from "./logo";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -36,12 +37,9 @@ export function SiteHeader() {
       {/* Main nav */}
       <div className="bg-background border-b border-border">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="grid size-10 place-items-center rounded-sm bg-primary font-display font-black italic text-primary-foreground text-xl border-b-2 border-secondary">
-              E
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-extrabold text-lg tracking-tight text-primary uppercase">Eurobit</div>
+          <Link to="/" className="flex items-center gap-3">
+            <Logo className="h-10 w-auto text-primary" />
+            <div className="hidden sm:block leading-tight">
               <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">Waterproofing Ind.</div>
             </div>
           </Link>
