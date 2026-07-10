@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, Download, Mail } from "lucide-react";
-import { products } from "@/lib/products";
+import { products, type Product } from "@/lib/products";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -62,7 +62,7 @@ function ProductDetail() {
           <div className="mt-8">
             <h2 className="font-display text-sm font-bold uppercase tracking-[0.2em] text-primary">Technical specifications</h2>
             <dl className="mt-4 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
-              {product.specs.map((s) => (
+              {product.specs.map((s: Product["specs"][number]) => (
                 <div key={s.label} className="bg-card p-4">
                   <dt className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{s.label}</dt>
                   <dd className="mt-1 font-display text-lg font-bold text-foreground">{s.value}</dd>
