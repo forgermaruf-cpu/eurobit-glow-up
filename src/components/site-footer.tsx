@@ -1,17 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Logo } from "./logo";
 
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <div className="grid size-10 place-items-center rounded-sm bg-secondary font-display font-black italic text-secondary-foreground text-xl">
-              E
-            </div>
-            <div className="font-display font-extrabold text-xl uppercase tracking-tight">Eurobit</div>
-          </div>
+          <Logo className="h-10 w-auto text-primary-foreground" />
           <p className="mt-4 max-w-md text-sm text-primary-foreground/70 leading-relaxed">
             ISO 9001:2015 certified manufacturer of modified bitumen membranes,
             concrete admixtures, and protective coatings — engineered in Lahore
