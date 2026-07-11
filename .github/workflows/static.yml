@@ -35,6 +35,16 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Add SPA fallback and disable Jekyll
+        run: |
+          # Nitro's static preset writes prerendered HTML into .output/public.
+          # GitHub Pages serves 404.html for any unknown path — copy index.html
+          # so client-side routes work on refresh/deep link.
+          if [ -f .output/public/index.html ]; then
+            cp .output/public/index.html .output/public/404.html
+          fi
+          touch .output/public/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
