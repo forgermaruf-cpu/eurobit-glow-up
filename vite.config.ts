@@ -8,26 +8,8 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-    },
-    pages: [
-      { path: "/" },
-      { path: "/about" },
-      { path: "/products" },
-      { path: "/news" },
-      { path: "/location" },
-      { path: "/contact" },
-      { path: "/products/eurobit-4170" },
-      { path: "/products/eurobit-4170-sl" },
-      { path: "/products/eurobit-garden" },
-      { path: "/products/eurobit-aluminium" },
-      { path: "/products/euro-plast-sp" },
-      { path: "/products/euro-cure" },
-      { path: "/products/euro-coat-ep" },
-      { path: "/products/euro-flex-pu" },
-      { path: "/products/euro-seal-pu" },
-    ],
+    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
+    // nitro/vite builds from this
+    server: { entry: "server" },
   },
 });
