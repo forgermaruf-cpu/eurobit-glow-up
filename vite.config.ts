@@ -33,7 +33,4 @@ export default defineConfig({
       { path: "/products/euro-seal-pu" },
     ],
   },
-  nitro: {
-    preset: "static",
-  },
 });
