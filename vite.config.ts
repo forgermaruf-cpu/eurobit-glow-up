@@ -12,4 +12,29 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    preset: "static",
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+      routes: [
+        "/",
+        "/about",
+        "/products",
+        "/news",
+        "/location",
+        "/contact",
+        "/sitemap.xml",
+        "/products/eurobit-4170",
+        "/products/eurobit-4170-sl",
+        "/products/eurobit-garden",
+        "/products/eurobit-aluminium",
+        "/products/euro-plast-sp",
+        "/products/euro-cure",
+        "/products/euro-coat-ep",
+        "/products/euro-flex-pu",
+        "/products/euro-seal-pu",
+      ],
+    },
+  },
 });
