@@ -5,11 +5,15 @@
 //     React/TanStack dedupe, error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-import { products } from "./src/lib/products";
+import { readFileSync } from "node:fs";
 
 // STATIC=1 => fully prerendered static site (GitHub Pages). Otherwise: normal Lovable SSR build.
 const isStatic = process.env["STATIC"] === "1";
 const base = process.env["BASE_PATH"] ?? "/";
+
+const productSlugs = Array.from(
+  readFileSync("./src/lib/products.ts", "utf8").matchAll(/slug:\s*"([^"]+)"/g),
+).map((m) => m[1]);
 
 const prerenderPaths = [
   "/",
@@ -18,7 +22,7 @@ const prerenderPaths = [
   "/news",
   "/location",
   "/contact",
-  ...products.map((p) => `/products/${p.slug}`),
+  ...productSlugs.map((slug) => `/products/${slug}`),
 ];
 
 export default defineConfig(
