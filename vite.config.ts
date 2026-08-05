@@ -29,7 +29,7 @@ export default defineConfig(
   isStatic
     ? {
         vite: { base },
-        nitro: { preset: "static" },
+        nitro: false,
         tanstackStart: {
           spa: { enabled: true },
           prerender: { enabled: true, crawlLinks: true, filter: () => true },
