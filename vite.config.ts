@@ -28,8 +28,8 @@ const prerenderPaths = [
 export default defineConfig(
   isStatic
     ? {
-        vite: { base, build: { outDir: "dist" } },
-        nitro: { preset: "static", output: { dir: ".output", publicDir: "dist" } },
+        vite: { base },
+        nitro: { preset: "static" },
         tanstackStart: {
           spa: { enabled: true },
           prerender: { enabled: true, crawlLinks: true, filter: () => true },
