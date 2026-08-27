@@ -48,8 +48,8 @@ function ProductDetail() {
       </Link>
 
       <div className="mt-8 grid gap-12 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-2xl border border-border bg-muted">
-          <img src={product.image} alt={product.name} width={800} height={1000} className="size-full object-cover" />
+        <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted p-6">
+          <img src={product.image} alt={product.imageAlt} width={800} height={600} className="h-auto w-full object-contain" />
         </div>
 
         <div>
