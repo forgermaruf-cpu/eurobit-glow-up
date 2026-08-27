@@ -11,6 +11,7 @@ export type Product = {
   description: string;
   specs: { label: string; value: string }[];
   image: string;
+  imageAlt: string;
 };
 
 export const productImage = productImg;
@@ -22,7 +23,7 @@ export const products: Product[] = [
     category: "Bitumen Membrane",
     tagline: "APP-modified torch-on membrane for roofs and foundations.",
     description:
-      "High-performance APP-modified bitumen waterproofing membrane, reinforced with non-woven polyester. Designed for exposed roofs, foundations, and podium decks in Pakistan's climate.",
+      "Eurobit 4170 is our core torch-applied APP-modified bitumen membrane, reinforced with non-woven polyester and available in 3, 4 and 5 mm (3170 / 4170 / 5170). Used for roof slabs, foundations, basements and podium decks.",
     specs: [
       { label: "Thickness", value: "3 / 4 / 5 mm" },
       { label: "Reinforcement", value: "Polyester" },
@@ -30,6 +31,8 @@ export const products: Product[] = [
       { label: "Standard", value: "ASTM D6222" },
     ],
     image: membraneImg,
+    imageAlt:
+      "Rolls of Eurobit 4170 APP-modified bitumen waterproofing membrane with black torch-on surface, red banding and printed eurobit branding.",
   },
   {
     slug: "eurobit-4170-sl",
@@ -37,7 +40,7 @@ export const products: Product[] = [
     category: "Bitumen Membrane",
     tagline: "Slate-finish membrane for exposed rooftop applications.",
     description:
-      "Mineral slate surfaced APP-modified membrane, UV resistant and suitable for exposed roof waterproofing without additional protection.",
+      "Eurobit 4170 SL is finished with coloured mineral slate granules on the top face, giving built-in UV protection so the membrane can be left exposed on roofs and terraces without a screed or tile covering.",
     specs: [
       { label: "Thickness", value: "4 mm" },
       { label: "Finish", value: "Mineral Slate" },
@@ -45,6 +48,8 @@ export const products: Product[] = [
       { label: "Warranty", value: "Up to 10 years" },
     ],
     image: membraneImg,
+    imageAlt:
+      "Roll of Eurobit 4170 SL mineral slate surfaced bitumen membrane, shown as a black torch-on roll with red band and eurobit branding.",
   },
   {
     slug: "eurobit-garden",
@@ -52,7 +57,7 @@ export const products: Product[] = [
     category: "Bitumen Membrane",
     tagline: "Root-resistant membrane for planters and green roofs.",
     description:
-      "Anti-root modified bitumen membrane engineered for green roofs, terraces, and planter boxes. Prevents root penetration and water ingress.",
+      "Eurobit Garden carries a chemical root inhibitor in the bitumen compound, so roots from lawns, shrubs and planted terraces cannot penetrate the waterproofing layer. Supplied for green roofs, planter boxes and landscaped podium decks.",
     specs: [
       { label: "Thickness", value: "4 mm" },
       { label: "Anti-Root", value: "Yes (chemical)" },
@@ -60,6 +65,8 @@ export const products: Product[] = [
       { label: "Application", value: "Green roofs" },
     ],
     image: membraneImg,
+    imageAlt:
+      "Roll of Eurobit Garden anti-root bitumen membrane for green roofs and planters, black torch-on roll with red band and eurobit branding.",
   },
   {
     slug: "eurobit-aluminium",
@@ -67,7 +74,7 @@ export const products: Product[] = [
     category: "Bitumen Membrane",
     tagline: "Aluminium-faced membrane, reflective and heat-resistant.",
     description:
-      "APP-modified membrane finished with a durable aluminium foil facing — reflects UV, resists heat, and enhances rooftop energy performance.",
+      "Eurobit Aluminium is laminated with an embossed aluminium foil facing that reflects sunlight and lowers surface temperature on exposed roofs, while the APP-modified bitumen core keeps the deck fully waterproof.",
     specs: [
       { label: "Thickness", value: "4 mm" },
       { label: "Facing", value: "Aluminium foil" },
@@ -75,6 +82,8 @@ export const products: Product[] = [
       { label: "Use", value: "Exposed roofs" },
     ],
     image: membraneImg,
+    imageAlt:
+      "Roll of Eurobit Aluminium foil-faced bitumen membrane, black torch-on roll with red band and eurobit branding.",
   },
   {
     slug: "euro-plast-sp",
@@ -90,6 +99,8 @@ export const products: Product[] = [
       { label: "Colour", value: "Amber liquid" },
     ],
     image: productImg,
+    imageAlt:
+      "Euro-Plast SP concrete superplasticizer admixture product image.",
   },
   {
     slug: "euro-cure",
@@ -105,6 +116,8 @@ export const products: Product[] = [
       { label: "Application", value: "Spray" },
     ],
     image: productImg,
+    imageAlt:
+      "Euro-Cure concrete curing compound product image.",
   },
   {
     slug: "euro-coat-ep",
@@ -120,6 +133,8 @@ export const products: Product[] = [
       { label: "Food Contact", value: "Available (FG grade)" },
     ],
     image: productImg,
+    imageAlt:
+      "Euro-Coat EP two-component epoxy protective coating product image.",
   },
   {
     slug: "euro-flex-pu",
@@ -135,6 +150,8 @@ export const products: Product[] = [
       { label: "Colour", value: "Grey / White" },
     ],
     image: productImg,
+    imageAlt:
+      "Euro-Flex PU liquid polyurethane waterproofing membrane product image.",
   },
   {
     slug: "euro-seal-pu",
@@ -150,6 +167,8 @@ export const products: Product[] = [
       { label: "Standard", value: "ASTM C-920" },
     ],
     image: productImg,
+    imageAlt:
+      "Euro-Seal PU polyurethane expansion joint sealant product image.",
   },
 ];
 
