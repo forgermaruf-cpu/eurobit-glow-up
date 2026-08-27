@@ -1,4 +1,7 @@
 import productImg from "@/assets/product-membrane.jpg";
+import membraneAsset from "@/assets/eurobit-membrane.jpg.asset.json";
+
+const membraneImg = membraneAsset.url;
 
 export type Product = {
   slug: string;
@@ -26,7 +29,7 @@ export const products: Product[] = [
       { label: "Softening Point", value: "≥ 150°C" },
       { label: "Standard", value: "ASTM D6222" },
     ],
-    image: productImg,
+    image: membraneImg,
   },
   {
     slug: "eurobit-4170-sl",
@@ -41,7 +44,7 @@ export const products: Product[] = [
       { label: "UV Resistance", value: "Excellent" },
       { label: "Warranty", value: "Up to 10 years" },
     ],
-    image: productImg,
+    image: membraneImg,
   },
   {
     slug: "eurobit-garden",
@@ -56,7 +59,7 @@ export const products: Product[] = [
       { label: "Reinforcement", value: "Polyester" },
       { label: "Application", value: "Green roofs" },
     ],
-    image: productImg,
+    image: membraneImg,
   },
   {
     slug: "eurobit-aluminium",
@@ -71,7 +74,7 @@ export const products: Product[] = [
       { label: "Reflectivity", value: "High" },
       { label: "Use", value: "Exposed roofs" },
     ],
-    image: productImg,
+    image: membraneImg,
   },
   {
     slug: "euro-plast-sp",
@@ -146,7 +149,7 @@ export const products: Product[] = [
       { label: "Cure", value: "Moisture" },
       { label: "Standard", value: "ASTM C-920" },
     ],
-    image: productImg,
+    image: membraneImg,
   },
 ];
 
