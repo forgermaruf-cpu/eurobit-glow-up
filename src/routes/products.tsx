@@ -63,15 +63,16 @@ function ProductsPage() {
               params={{ slug: p.slug }}
               className="group flex flex-col rounded-xl border border-border bg-card p-3 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-md bg-muted">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-muted">
                 <img
                   src={p.image}
-                  alt={p.name}
+                  alt={p.imageAlt}
                   loading="lazy"
                   width={800}
-                  height={1000}
-                  className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  height={600}
+                  className="size-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                 />
+
                 <div className="absolute left-3 top-3 rounded-full bg-primary/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
                   {p.category}
                 </div>
