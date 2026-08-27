@@ -149,7 +149,7 @@ export const products: Product[] = [
       { label: "Cure", value: "Moisture" },
       { label: "Standard", value: "ASTM C-920" },
     ],
-    image: membraneImg,
+    image: productImg,
   },
 ];
 
