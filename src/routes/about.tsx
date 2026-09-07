@@ -22,9 +22,9 @@ function About() {
   return (
     <>
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">About Us</div>
-          <h1 className="mt-3 max-w-3xl font-display text-5xl font-extrabold tracking-tight md:text-6xl">
+          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">
             Waterproofing pioneers, made in Lahore.
           </h1>
           <p className="mt-6 max-w-2xl text-primary-foreground/80 text-lg">
@@ -35,7 +35,7 @@ function About() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center">
+      <section className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:grid-cols-2 lg:items-center">
         <img src={factoryImg} alt="Eurobit manufacturing facility" loading="lazy" width={1600} height={1000} className="rounded-2xl object-cover shadow-[var(--shadow-card)]" />
         <div>
           <h2 className="font-display text-3xl font-extrabold tracking-tight">Our story</h2>
@@ -56,7 +56,7 @@ function About() {
       </section>
 
       <section className="bg-muted/40">
-        <div className="mx-auto max-w-7xl px-6 py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <h2 className="font-display text-3xl font-extrabold tracking-tight">Why Eurobit</h2>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[

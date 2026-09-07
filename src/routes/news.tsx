@@ -26,9 +26,9 @@ function News() {
   return (
     <>
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">News & Guides</div>
-          <h1 className="mt-3 font-display text-5xl font-extrabold tracking-tight md:text-6xl">Expert waterproofing guides</h1>
+          <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Expert waterproofing guides</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
             Deep-dive articles on leakage causes, permanent fixes, and product
             selection — city by city.
@@ -36,7 +36,7 @@ function News() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((p) => (
             <article key={p.title} className="group flex flex-col rounded-xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">

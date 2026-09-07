@@ -20,9 +20,9 @@ function Contact() {
   return (
     <>
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Contact</div>
-          <h1 className="mt-3 font-display text-5xl font-extrabold tracking-tight md:text-6xl">Talk to our engineers</h1>
+          <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Talk to our engineers</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
             Tell us about your project — we'll recommend the right membrane,
             admixture, or coating for your site conditions.
@@ -30,7 +30,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1fr_1.4fr]">
+      <section className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:grid-cols-[1fr_1.4fr]">
         <div className="space-y-4">
           {[
             { icon: MapPin, label: "Visit", value: "Industrial Estate, Kot Lakhpat, Lahore" },
@@ -57,7 +57,7 @@ function Contact() {
           className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
         >
           {sent ? (
-            <div className="grid place-items-center py-16 text-center">
+            <div className="grid place-items-center py-12 sm:py-16 text-center">
               <div className="grid size-14 place-items-center rounded-full bg-secondary/10 text-secondary">
                 <Send className="size-6" />
               </div>

@@ -25,9 +25,9 @@ function ProductsPage() {
   return (
     <>
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Products</div>
-          <h1 className="mt-3 font-display text-5xl font-extrabold tracking-tight md:text-6xl">Our catalogue</h1>
+          <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Our catalogue</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
             Every product manufactured in Lahore, conforming to ASTM standards.
             Technical data sheets available on request.
@@ -35,7 +35,7 @@ function ProductsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-14">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="flex flex-wrap gap-2">
           {["All", ...productCategories].map((c) => {
             const isActive = active === c;

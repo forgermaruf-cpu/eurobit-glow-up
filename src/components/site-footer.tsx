@@ -5,7 +5,7 @@ import { Logo } from "./logo";
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo className="h-10 w-auto text-primary-foreground" />
           <p className="mt-4 max-w-md text-sm text-primary-foreground/70 leading-relaxed">
@@ -44,7 +44,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-primary-foreground/60 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 py-5 text-xs text-primary-foreground/60 md:flex-row">
           <p>© {new Date().getFullYear()} Eurobit Waterproofing Industries. All rights reserved.</p>
           <p className="font-mono tracking-widest uppercase">Made in Lahore</p>
         </div>

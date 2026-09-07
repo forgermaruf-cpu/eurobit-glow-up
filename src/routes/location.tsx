@@ -17,13 +17,13 @@ function Location() {
   return (
     <>
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Location</div>
-          <h1 className="mt-3 font-display text-5xl font-extrabold tracking-tight md:text-6xl">Find us in Lahore</h1>
+          <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Find us in Lahore</h1>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 lg:grid-cols-[1fr_1.4fr]">
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:grid-cols-[1fr_1.4fr]">
         <div className="space-y-4">
           {[
             { icon: MapPin, label: "Head Office & Factory", value: "Industrial Estate, Kot Lakhpat\nLahore, Pakistan" },

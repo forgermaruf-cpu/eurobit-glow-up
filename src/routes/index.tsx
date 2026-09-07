@@ -35,7 +35,7 @@ function Home() {
           className="absolute inset-0 -z-10 size-full object-cover opacity-40"
         />
         <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-hero)]" />
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 lg:grid-cols-12 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-24 lg:grid-cols-12 lg:py-32">
           <div className="lg:col-span-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-secondary">
               <ShieldCheck className="size-3.5" /> ISO 9001:2015 Certified Manufacturer
@@ -81,7 +81,7 @@ function Home() {
 
       {/* Client marquee */}
       <section className="border-b border-border bg-muted/50">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-4 px-6 py-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-4 px-4 sm:px-6 lg:px-8 py-8">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">Trusted by</span>
           {clients.map((c) => (
             <span key={c} className="font-display text-sm font-bold uppercase tracking-wider text-foreground/60">
@@ -92,11 +92,11 @@ function Home() {
       </section>
 
       {/* Product grid */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Our catalogue</div>
-            <h2 className="mt-2 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
               Products
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
@@ -146,7 +146,7 @@ function Home() {
 
       {/* About strip */}
       <section className="bg-muted/40">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)]">
             <img src={factoryImg} alt="Eurobit manufacturing facility in Lahore" loading="lazy" width={1600} height={1000} className="size-full object-cover" />
             <div className="absolute bottom-6 left-6 right-6 rounded-lg bg-primary/95 p-5 text-primary-foreground backdrop-blur">
@@ -156,7 +156,7 @@ function Home() {
           </div>
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">About Eurobit</div>
-            <h2 className="mt-2 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
               Local precision.<br />Global standards.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -189,7 +189,7 @@ function Home() {
       </section>
 
       {/* News */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         <div className="flex items-end justify-between">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Latest guides</div>
@@ -219,7 +219,7 @@ function Home() {
 
       {/* CTA */}
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-16 md:grid-cols-[1.4fr_1fr]">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-4xl">
               Need waterproofing for your next project?
