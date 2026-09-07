@@ -7,11 +7,11 @@ import { products } from "@/lib/products";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eurobit — Waterproofing & Construction Chemicals, Lahore" },
+      { title: "Eurobit — Waterproofing & Construction Chemicals, Pakistan" },
       {
         name: "description",
         content:
-          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
+          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — supplied across Pakistan and trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
       },
     ],
   }),
@@ -35,53 +35,55 @@ function Home() {
           className="absolute inset-0 -z-10 size-full object-cover opacity-40"
         />
         <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-hero)]" />
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 lg:grid-cols-12 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:grid-cols-12 lg:py-32">
           <div className="lg:col-span-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-secondary">
-              <ShieldCheck className="size-3.5" /> ISO 9001:2015 Certified Manufacturer
+            <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-secondary sm:px-4 sm:text-xs">
+              <ShieldCheck className="size-3.5 shrink-0" /> ISO 9001:2015 Certified Manufacturer
             </div>
-            <h1 className="mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight md:text-7xl">
+            <h1 className="mt-6 max-w-4xl font-display text-[2rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl sm:leading-[1.02] md:text-7xl">
               Waterproofing & construction chemicals,{" "}
-              <span className="text-secondary">engineered in Lahore.</span>
+              <span className="text-secondary">delivered across Pakistan.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
+            <p className="mt-5 max-w-2xl text-base text-primary-foreground/80 sm:mt-6 sm:text-lg">
               Eurobit manufactures modified bitumen membranes, concrete
-              admixtures, and protective coatings — built to withstand
-              Pakistan's monsoon rains, rising damp, and extreme summer heat.
+              admixtures, and protective coatings — supplied nationwide from
+              Karachi to Gilgit, built to withstand Pakistan's monsoon rains,
+              rising damp, and extreme summer heat.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-4 text-sm font-bold uppercase tracking-widest text-secondary-foreground shadow-[0_10px_30px_-10px_var(--brand-orange)] transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-secondary-foreground shadow-[0_10px_30px_-10px_var(--brand-orange)] transition-transform hover:-translate-y-0.5 sm:px-7 sm:py-4 sm:text-sm"
               >
                 View Products <ArrowRight className="size-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/5 px-7 py-4 text-sm font-bold uppercase tracking-widest transition-colors hover:bg-primary-foreground/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/5 px-6 py-3.5 text-xs font-bold uppercase tracking-widest transition-colors hover:bg-primary-foreground/10 sm:px-7 sm:py-4 sm:text-sm"
               >
                 Request a Quote
               </Link>
             </div>
           </div>
-          <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:justify-end lg:gap-4">
+          <div className="grid grid-cols-3 gap-3 lg:col-span-4 lg:flex lg:flex-col lg:justify-end lg:gap-4">
             {[
               { k: "30+", v: "Years manufacturing" },
               { k: "200+", v: "Major projects delivered" },
               { k: "9001", v: "ISO Quality certified" },
             ].map((s) => (
-              <div key={s.v} className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 p-5 backdrop-blur-sm">
-                <div className="font-display text-4xl font-black text-secondary">{s.k}</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-primary-foreground/70">{s.v}</div>
+              <div key={s.v} className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 p-3 backdrop-blur-sm sm:p-5">
+                <div className="font-display text-2xl font-black text-secondary sm:text-4xl">{s.k}</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-primary-foreground/70 sm:text-xs">{s.v}</div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
       {/* Client marquee */}
       <section className="border-b border-border bg-muted/50">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-4 px-6 py-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-3 sm:gap-x-12 sm:gap-y-4 px-4 sm:px-6 lg:px-8 py-8">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">Trusted by</span>
           {clients.map((c) => (
             <span key={c} className="font-display text-sm font-bold uppercase tracking-wider text-foreground/60">
@@ -92,16 +94,16 @@ function Home() {
       </section>
 
       {/* Product grid */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Our catalogue</div>
-            <h2 className="mt-2 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+            <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
               Products
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
               Modified bitumen membranes, admixtures, and coatings —
-              manufactured at our Lahore facility, conforming to ASTM standards.
+              manufactured at our own facility and delivered nationwide, conforming to ASTM standards.
             </p>
           </div>
           <Link
@@ -146,7 +148,7 @@ function Home() {
 
       {/* About strip */}
       <section className="bg-muted/40">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-14 sm:py-20 lg:grid-cols-2 lg:items-center">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)]">
             <img src={factoryImg} alt="Eurobit manufacturing facility in Lahore" loading="lazy" width={1600} height={1000} className="size-full object-cover" />
             <div className="absolute bottom-6 left-6 right-6 rounded-lg bg-primary/95 p-5 text-primary-foreground backdrop-blur">
@@ -156,19 +158,20 @@ function Home() {
           </div>
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">About Eurobit</div>
-            <h2 className="mt-2 font-display text-4xl font-extrabold tracking-tight md:text-5xl">
-              Local precision.<br />Global standards.
+            <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
+              Nationwide reach.<br />Global standards.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Eurobit is a Lahore-based, ISO 9001:2015 certified manufacturer of
+              Eurobit is a Pakistani, ISO 9001:2015 certified manufacturer of
               modified bitumen membranes, concrete admixtures, and protective
-              coatings — engineered for Pakistan's climate. We are registered
+              coatings — engineered for Pakistan's climate and supplied to sites in
+              every province. We are registered
               with the Pakistan Engineering Council, Military Engineer Services,
               and the SECP.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { icon: Factory, label: "In-house manufacturing" },
+                { icon: Factory, label: "Nationwide delivery" },
                 { icon: Droplets, label: "ASTM-compliant products" },
                 { icon: Award, label: "10-year warranties" },
               ].map(({ icon: Icon, label }) => (
@@ -189,7 +192,7 @@ function Home() {
       </section>
 
       {/* News */}
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         <div className="flex items-end justify-between">
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Latest guides</div>
@@ -219,7 +222,7 @@ function Home() {
 
       {/* CTA */}
       <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-16 md:grid-cols-[1.4fr_1fr]">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:grid-cols-[1.4fr_1fr]">
           <div>
             <h2 className="font-display text-3xl font-extrabold tracking-tight md:text-4xl">
               Need waterproofing for your next project?

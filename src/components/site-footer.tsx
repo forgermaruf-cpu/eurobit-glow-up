@@ -5,16 +5,16 @@ import { Logo } from "./logo";
 export function SiteFooter() {
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo className="h-10 w-auto text-primary-foreground" />
           <p className="mt-4 max-w-md text-sm text-primary-foreground/70 leading-relaxed">
             ISO 9001:2015 certified manufacturer of modified bitumen membranes,
-            concrete admixtures, and protective coatings — engineered in Lahore
-            for Pakistan's climate.
+            concrete admixtures, and protective coatings — made in Pakistan and
+            delivered nationwide.
           </p>
           <div className="mt-6 space-y-2 text-sm text-primary-foreground/80">
-            <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-secondary shrink-0" /> Industrial Estate, Kot Lakhpat, Lahore, Pakistan</div>
+            <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-secondary shrink-0" /> Industrial Estate, Kot Lakhpat, Lahore — serving all Pakistan</div>
             <div className="flex items-center gap-3"><Mail className="size-4 text-secondary" /> info@eurobit.online</div>
             <div className="flex items-center gap-3"><Phone className="size-4 text-secondary" /> +92 42 3571 0000</div>
           </div>
@@ -44,9 +44,9 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-primary-foreground/60 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 py-5 text-xs text-primary-foreground/60 md:flex-row">
           <p>© {new Date().getFullYear()} Eurobit Waterproofing Industries. All rights reserved.</p>
-          <p className="font-mono tracking-widest uppercase">Made in Lahore</p>
+          <p className="font-mono tracking-widest uppercase">Made in Pakistan · Delivered nationwide</p>
         </div>
       </div>
     </footer>

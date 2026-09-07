@@ -42,7 +42,7 @@ function ProductDetail() {
   const { product } = Route.useLoaderData();
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-14">
+    <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
       <Link to="/products" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-secondary">
         <ArrowLeft className="size-3.5" /> All products
       </Link>
@@ -54,7 +54,7 @@ function ProductDetail() {
 
         <div>
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">{product.category}</div>
-          <h1 className="mt-2 font-display text-4xl font-extrabold tracking-tight md:text-5xl">{product.name}</h1>
+          <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">{product.name}</h1>
           <p className="mt-4 text-lg text-muted-foreground">{product.tagline}</p>
 
           <p className="mt-6 leading-relaxed">{product.description}</p>
