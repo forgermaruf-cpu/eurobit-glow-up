@@ -35,47 +35,49 @@ function Home() {
           className="absolute inset-0 -z-10 size-full object-cover opacity-40"
         />
         <div className="absolute inset-0 -z-10 bg-[image:var(--gradient-hero)]" />
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-24 lg:grid-cols-12 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:grid-cols-12 lg:py-32">
           <div className="lg:col-span-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-secondary">
-              <ShieldCheck className="size-3.5" /> ISO 9001:2015 Certified Manufacturer
+            <div className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-secondary sm:px-4 sm:text-xs">
+              <ShieldCheck className="size-3.5 shrink-0" /> ISO 9001:2015 Certified Manufacturer
             </div>
-            <h1 className="mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight md:text-7xl">
+            <h1 className="mt-6 max-w-4xl font-display text-[2rem] font-extrabold leading-[1.08] tracking-tight sm:text-5xl sm:leading-[1.02] md:text-7xl">
               Waterproofing & construction chemicals,{" "}
-              <span className="text-secondary">engineered in Lahore.</span>
+              <span className="text-secondary">delivered across Pakistan.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
+            <p className="mt-5 max-w-2xl text-base text-primary-foreground/80 sm:mt-6 sm:text-lg">
               Eurobit manufactures modified bitumen membranes, concrete
-              admixtures, and protective coatings — built to withstand
-              Pakistan's monsoon rains, rising damp, and extreme summer heat.
+              admixtures, and protective coatings — supplied nationwide from
+              Karachi to Gilgit, built to withstand Pakistan's monsoon rains,
+              rising damp, and extreme summer heat.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-4">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 rounded-full bg-secondary px-7 py-4 text-sm font-bold uppercase tracking-widest text-secondary-foreground shadow-[0_10px_30px_-10px_var(--brand-orange)] transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-6 py-3.5 text-xs font-bold uppercase tracking-widest text-secondary-foreground shadow-[0_10px_30px_-10px_var(--brand-orange)] transition-transform hover:-translate-y-0.5 sm:px-7 sm:py-4 sm:text-sm"
               >
                 View Products <ArrowRight className="size-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/5 px-7 py-4 text-sm font-bold uppercase tracking-widest transition-colors hover:bg-primary-foreground/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/5 px-6 py-3.5 text-xs font-bold uppercase tracking-widest transition-colors hover:bg-primary-foreground/10 sm:px-7 sm:py-4 sm:text-sm"
               >
                 Request a Quote
               </Link>
             </div>
           </div>
-          <div className="hidden lg:col-span-4 lg:flex lg:flex-col lg:justify-end lg:gap-4">
+          <div className="grid grid-cols-3 gap-3 lg:col-span-4 lg:flex lg:flex-col lg:justify-end lg:gap-4">
             {[
               { k: "30+", v: "Years manufacturing" },
               { k: "200+", v: "Major projects delivered" },
               { k: "9001", v: "ISO Quality certified" },
             ].map((s) => (
-              <div key={s.v} className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 p-5 backdrop-blur-sm">
-                <div className="font-display text-4xl font-black text-secondary">{s.k}</div>
-                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-primary-foreground/70">{s.v}</div>
+              <div key={s.v} className="rounded-lg border border-primary-foreground/15 bg-primary-foreground/5 p-3 backdrop-blur-sm sm:p-5">
+                <div className="font-display text-2xl font-black text-secondary sm:text-4xl">{s.k}</div>
+                <div className="mt-1 text-[10px] font-semibold uppercase tracking-widest text-primary-foreground/70 sm:text-xs">{s.v}</div>
               </div>
             ))}
           </div>
+
         </div>
       </section>
 
