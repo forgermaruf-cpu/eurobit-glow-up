@@ -7,11 +7,11 @@ import { products } from "@/lib/products";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Eurobit — Waterproofing & Construction Chemicals, Lahore" },
+      { title: "Eurobit — Waterproofing & Construction Chemicals, Pakistan" },
       {
         name: "description",
         content:
-          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
+          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — supplied across Pakistan and trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
       },
     ],
   }),
@@ -83,7 +83,7 @@ function Home() {
 
       {/* Client marquee */}
       <section className="border-b border-border bg-muted/50">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-12 gap-y-4 px-4 sm:px-6 lg:px-8 py-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-3 sm:gap-x-12 sm:gap-y-4 px-4 sm:px-6 lg:px-8 py-8">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">Trusted by</span>
           {clients.map((c) => (
             <span key={c} className="font-display text-sm font-bold uppercase tracking-wider text-foreground/60">
@@ -103,7 +103,7 @@ function Home() {
             </h2>
             <p className="mt-3 max-w-xl text-muted-foreground">
               Modified bitumen membranes, admixtures, and coatings —
-              manufactured at our Lahore facility, conforming to ASTM standards.
+              manufactured at our own facility and delivered nationwide, conforming to ASTM standards.
             </p>
           </div>
           <Link
@@ -159,18 +159,19 @@ function Home() {
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">About Eurobit</div>
             <h2 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl">
-              Local precision.<br />Global standards.
+              Nationwide reach.<br />Global standards.
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
-              Eurobit is a Lahore-based, ISO 9001:2015 certified manufacturer of
+              Eurobit is a Pakistani, ISO 9001:2015 certified manufacturer of
               modified bitumen membranes, concrete admixtures, and protective
-              coatings — engineered for Pakistan's climate. We are registered
+              coatings — engineered for Pakistan's climate and supplied to sites in
+              every province. We are registered
               with the Pakistan Engineering Council, Military Engineer Services,
               and the SECP.
             </p>
             <div className="mt-8 grid grid-cols-3 gap-4">
               {[
-                { icon: Factory, label: "In-house manufacturing" },
+                { icon: Factory, label: "Nationwide delivery" },
                 { icon: Droplets, label: "ASTM-compliant products" },
                 { icon: Award, label: "10-year warranties" },
               ].map(({ icon: Icon, label }) => (

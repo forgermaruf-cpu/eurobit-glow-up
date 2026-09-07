@@ -79,23 +79,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Eurobit — Waterproofing & Construction Chemicals, Lahore" },
+      { title: "Eurobit — Waterproofing & Construction Chemicals, Pakistan" },
       {
         name: "description",
         content:
-          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
+          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — supplied across Pakistan, trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
       },
       { name: "author", content: "Eurobit" },
-      { property: "og:title", content: "Eurobit — Waterproofing & Construction Chemicals, Lahore" },
+      { property: "og:title", content: "Eurobit — Waterproofing & Construction Chemicals, Pakistan" },
       {
         property: "og:description",
         content:
-          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
+          "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — supplied across Pakistan, trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Eurobit — Waterproofing & Construction Chemicals, Lahore" },
-      { name: "twitter:description", content: "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport." },
+      { name: "twitter:title", content: "Eurobit — Waterproofing & Construction Chemicals, Pakistan" },
+      { name: "twitter:description", content: "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — supplied across Pakistan, trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/265b952a-9063-4730-978a-6630a3d8b177/id-preview-f249d7a1--a2758643-309d-449f-b4d5-0dc80482fc57.lovable.app-1783712152789.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/265b952a-9063-4730-978a-6630a3d8b177/id-preview-f249d7a1--a2758643-309d-449f-b4d5-0dc80482fc57.lovable.app-1783712152789.png" },
     ],

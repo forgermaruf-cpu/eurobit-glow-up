@@ -9,7 +9,7 @@ export const Route = createFileRoute("/products")({
       {
         name: "description",
         content:
-          "Explore Eurobit's full catalogue: APP/SBS bitumen membranes, concrete admixtures, protective coatings and sealants — manufactured in Lahore.",
+          "Explore Eurobit's full catalogue: APP/SBS bitumen membranes, concrete admixtures, protective coatings and sealants — manufactured in Pakistan and delivered nationwide.",
       },
       { property: "og:title", content: "Eurobit Product Catalogue" },
       { property: "og:description", content: "APP/SBS membranes, admixtures, coatings and sealants." },
@@ -29,7 +29,8 @@ function ProductsPage() {
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Products</div>
           <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Our catalogue</h1>
           <p className="mt-4 max-w-2xl text-primary-foreground/80">
-            Every product manufactured in Lahore, conforming to ASTM standards.
+            Every product manufactured in Pakistan and delivered nationwide,
+            conforming to ASTM standards.
             Technical data sheets available on request.
           </p>
         </div>

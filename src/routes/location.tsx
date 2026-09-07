@@ -4,8 +4,8 @@ import { MapPin, Mail, Phone, Clock } from "lucide-react";
 export const Route = createFileRoute("/location")({
   head: () => ({
     meta: [
-      { title: "Location — Eurobit, Lahore Pakistan" },
-      { name: "description", content: "Visit Eurobit's manufacturing facility in Kot Lakhpat, Lahore, Pakistan." },
+      { title: "Location & Nationwide Delivery — Eurobit Pakistan" },
+      { name: "description", content: "Visit Eurobit's manufacturing facility in Kot Lakhpat, Lahore — with delivery to projects across Pakistan." },
       { property: "og:title", content: "Location — Eurobit" },
       { property: "og:description", content: "Eurobit facility in Kot Lakhpat, Lahore." },
     ],
@@ -19,7 +19,7 @@ function Location() {
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">Location</div>
-          <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Find us in Lahore</h1>
+          <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">Our factory & nationwide delivery</h1>
         </div>
       </section>
 
@@ -27,6 +27,7 @@ function Location() {
         <div className="space-y-4">
           {[
             { icon: MapPin, label: "Head Office & Factory", value: "Industrial Estate, Kot Lakhpat\nLahore, Pakistan" },
+            { icon: MapPin, label: "Delivery coverage", value: "All Pakistan — Punjab, Sindh, KPK,\nBalochistan, AJK & Gilgit-Baltistan" },
             { icon: Phone, label: "Phone", value: "+92 42 3571 0000" },
             { icon: Mail, label: "Email", value: "info@eurobit.online" },
             { icon: Clock, label: "Hours", value: "Mon – Sat · 9:00 – 18:00" },
@@ -47,7 +48,7 @@ function Location() {
           <iframe
             title="Eurobit Lahore location"
             src="https://www.google.com/maps?q=Kot+Lakhpat+Industrial+Estate+Lahore&output=embed"
-            className="h-[500px] w-full"
+            className="h-[320px] w-full sm:h-[500px]"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />

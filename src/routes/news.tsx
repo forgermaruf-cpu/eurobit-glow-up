@@ -5,7 +5,7 @@ export const Route = createFileRoute("/news")({
   head: () => ({
     meta: [
       { title: "News & Guides — Eurobit" },
-      { name: "description", content: "Expert waterproofing guides for Lahore, Islamabad, Karachi and beyond." },
+      { name: "description", content: "Expert waterproofing guides for Lahore, Islamabad, Karachi, Peshawar, Quetta and beyond." },
       { property: "og:title", content: "News & Guides — Eurobit" },
       { property: "og:description", content: "Expert waterproofing guides from Eurobit." },
     ],

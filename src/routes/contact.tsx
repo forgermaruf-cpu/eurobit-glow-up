@@ -33,7 +33,7 @@ function Contact() {
       <section className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:grid-cols-[1fr_1.4fr]">
         <div className="space-y-4">
           {[
-            { icon: MapPin, label: "Visit", value: "Industrial Estate, Kot Lakhpat, Lahore" },
+            { icon: MapPin, label: "Visit", value: "Kot Lakhpat, Lahore — nationwide delivery" },
             { icon: Phone, label: "Call", value: "+92 42 3571 0000" },
             { icon: Mail, label: "Email", value: "info@eurobit.online" },
           ].map(({ icon: Icon, label, value }) => (
@@ -54,7 +54,7 @@ function Contact() {
             e.preventDefault();
             setSent(true);
           }}
-          className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)]"
+          className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)] sm:p-8"
         >
           {sent ? (
             <div className="grid place-items-center py-12 sm:py-16 text-center">
@@ -74,7 +74,7 @@ function Contact() {
                 <Field label="Email" name="email" type="email" required />
                 <Field label="Phone" name="phone" />
               </div>
-              <Field label="Project location" name="location" placeholder="e.g. DHA Phase 6, Lahore" />
+              <Field label="Project location" name="location" placeholder="e.g. DHA Phase 6, Lahore or Clifton, Karachi" />
               <div>
                 <label className="text-[11px] font-bold uppercase tracking-[0.2em] text-muted-foreground">Message</label>
                 <textarea

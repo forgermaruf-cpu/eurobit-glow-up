@@ -5,14 +5,14 @@ import factoryImg from "@/assets/factory.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Eurobit — Lahore's Waterproofing Manufacturer" },
+      { title: "About Eurobit — Pakistan's Waterproofing Manufacturer" },
       {
         name: "description",
         content:
-          "Eurobit is an ISO 9001:2015 certified manufacturer of waterproofing and construction chemicals in Lahore, Pakistan. Learn about our facility, certifications, and clients.",
+          "Eurobit is an ISO 9001:2015 certified manufacturer of waterproofing and construction chemicals serving all of Pakistan. Learn about our facility, certifications, and clients.",
       },
       { property: "og:title", content: "About Eurobit" },
-      { property: "og:description", content: "Lahore-based manufacturer of waterproofing and construction chemicals since 1994." },
+      { property: "og:description", content: "Pakistani manufacturer of waterproofing and construction chemicals since 1994, delivering nationwide." },
     ],
   }),
   component: About,
@@ -25,7 +25,7 @@ function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
           <div className="text-xs font-bold uppercase tracking-[0.25em] text-secondary">About Us</div>
           <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl md:text-6xl">
-            Waterproofing pioneers, made in Lahore.
+            Waterproofing pioneers, made in Pakistan.
           </h1>
           <p className="mt-6 max-w-2xl text-primary-foreground/80 text-lg">
             Since 1994, Eurobit has been manufacturing modified bitumen
@@ -42,7 +42,8 @@ function About() {
           <p className="mt-4 text-muted-foreground leading-relaxed">
             Eurobit was founded to end Pakistan's reliance on imported
             waterproofing materials. Every product in our catalogue is
-            manufactured at our own facility in Lahore rather than imported —
+            manufactured at our own facility in Pakistan rather than imported, and
+            shipped to projects in every province —
             engineered specifically for the country's monsoon, saim, and heat.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -61,11 +62,11 @@ function About() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               { icon: ShieldCheck, title: "ISO 9001:2015", desc: "Certified quality management across every batch and process." },
-              { icon: Factory, title: "Own facility", desc: "Manufactured in Lahore — never imported, always traceable." },
+              { icon: Factory, title: "Own facility", desc: "Manufactured in Pakistan — never imported, always traceable." },
               { icon: Beaker, title: "ASTM tested", desc: "Every formulation conforms to international ASTM standards." },
               { icon: Award, title: "Long warranties", desc: "Waterproofing systems backed by up to 10-year warranties." },
               { icon: Users, title: "Trusted clients", desc: "Nestlé, Coca-Cola, Toyota, Lahore Airport and more." },
-              { icon: Globe2, title: "National coverage", desc: "Delivering to sites across Punjab, Sindh, and beyond." },
+              { icon: Globe2, title: "National coverage", desc: "Delivering to sites in Punjab, Sindh, KPK, Balochistan, AJK and Gilgit-Baltistan." },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="rounded-xl border border-border bg-card p-6">
                 <div className="grid size-10 place-items-center rounded-md bg-secondary/10 text-secondary">
