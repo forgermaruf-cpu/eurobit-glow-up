@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone, Facebook, Youtube, Menu, X } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Facebook, Youtube, Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 
 const nav = [
