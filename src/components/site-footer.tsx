@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Logo } from "./logo";
 
 export function SiteFooter() {
@@ -17,6 +17,17 @@ export function SiteFooter() {
             <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-secondary shrink-0" /> Industrial Estate, Kot Lakhpat, Lahore — serving all Pakistan</div>
             <div className="flex items-center gap-3"><Mail className="size-4 text-secondary" /> info@eurobit.online</div>
             <div className="flex items-center gap-3"><Phone className="size-4 text-secondary" /> +92 42 3571 0000</div>
+            <div className="flex items-center gap-3">
+              <MessageCircle className="size-4 text-secondary shrink-0" />
+              <a
+                href="https://wa.me/923139544444?text=Hello%20Eurobit!%20I%20would%20like%20to%20inquire%20about%20your%20waterproofing%20products."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-secondary"
+              >
+                WhatsApp: +92 313 9544444
+              </a>
+            </div>
           </div>
         </div>
 

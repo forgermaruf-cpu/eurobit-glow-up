@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone, Facebook, Youtube, Menu, X } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Facebook, Youtube, Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 
 const nav = [
@@ -32,6 +32,15 @@ export function SiteHeader() {
           </div>
           <div className="flex shrink-0 items-center gap-3">
             <a href="tel:+924235710000" aria-label="Call Eurobit" className="hover:text-secondary sm:hidden"><Phone className="size-4" /></a>
+            <a
+              href="https://wa.me/923139544444?text=Hello%20Eurobit!%20I%20would%20like%20to%20inquire%20about%20your%20waterproofing%20products."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with Eurobit on WhatsApp"
+              className="hover:text-secondary"
+            >
+              <MessageCircle className="size-4" />
+            </a>
             <a href="#" aria-label="Facebook" className="hover:text-secondary"><Facebook className="size-4" /></a>
             <a href="#" aria-label="YouTube" className="hover:text-secondary"><Youtube className="size-4" /></a>
           </div>
