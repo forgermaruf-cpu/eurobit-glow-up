@@ -29,8 +29,9 @@ jobs:
       - name: Build fully static site
         env:
           STATIC: "1"
-          # Root domain / user site -> "/". For a project site use "/<repo-name>/".
-          BASE_PATH: "/"
+          # Project site (user.github.io/<repo>/) -> "/<repo>/".
+          # For a user/org root site or custom domain, change this to "/".
+          BASE_PATH: "/${{ github.event.repository.name }}/"
         run: bun run build:static
 
       - name: Add SPA fallback + disable Jekyll
