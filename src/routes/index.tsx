@@ -236,7 +236,7 @@ function Home() {
             <Link to="/contact" className="rounded-full bg-secondary px-7 py-4 text-sm font-bold uppercase tracking-widest text-secondary-foreground hover:brightness-110">
               Get in touch
             </Link>
-            <a href="tel:+924235710000" className="rounded-full border border-primary-foreground/25 px-7 py-4 text-sm font-bold uppercase tracking-widest hover:bg-primary-foreground/10">
+            <a href="tel:+923139544444" className="rounded-full border border-primary-foreground/25 px-7 py-4 text-sm font-bold uppercase tracking-widest hover:bg-primary-foreground/10">
               Call sales
             </a>
           </div>

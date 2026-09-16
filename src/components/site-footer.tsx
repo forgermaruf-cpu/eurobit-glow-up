@@ -16,7 +16,7 @@ export function SiteFooter() {
           <div className="mt-6 space-y-2 text-sm text-primary-foreground/80">
             <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-secondary shrink-0" /> Industrial Estate, Kot Lakhpat, Lahore — serving all Pakistan</div>
             <div className="flex items-center gap-3"><Mail className="size-4 text-secondary" /> info@eurobit.online</div>
-            <div className="flex items-center gap-3"><Phone className="size-4 text-secondary" /> +92 42 3571 0000</div>
+            <div className="flex items-center gap-3"><Phone className="size-4 text-secondary" /> <a href="tel:+923139544444" className="hover:text-secondary">0313 9544444</a></div>
             <div className="flex items-center gap-3">
               <MessageCircle className="size-4 text-secondary shrink-0" />
               <a

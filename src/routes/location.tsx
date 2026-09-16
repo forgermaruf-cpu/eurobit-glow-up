@@ -28,7 +28,7 @@ function Location() {
           {[
             { icon: MapPin, label: "Head Office & Factory", value: "Industrial Estate, Kot Lakhpat\nLahore, Pakistan" },
             { icon: MapPin, label: "Delivery coverage", value: "All Pakistan — Punjab, Sindh, KPK,\nBalochistan, AJK & Gilgit-Baltistan" },
-            { icon: Phone, label: "Phone", value: "+92 42 3571 0000" },
+            { icon: Phone, label: "Phone", value: "0313 9544444" },
             { icon: Mail, label: "Email", value: "info@eurobit.online" },
             { icon: Clock, label: "Hours", value: "Mon – Sat · 9:00 – 18:00" },
           ].map(({ icon: Icon, label, value }) => (
