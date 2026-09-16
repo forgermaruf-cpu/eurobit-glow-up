@@ -34,7 +34,7 @@ function Contact() {
         <div className="space-y-4">
           {[
             { icon: MapPin, label: "Visit", value: "Kot Lakhpat, Lahore — nationwide delivery" },
-            { icon: Phone, label: "Call", value: "+92 42 3571 0000" },
+            { icon: Phone, label: "Call", value: "0313 9544444" },
             { icon: Mail, label: "Email", value: "info@eurobit.online" },
           ].map(({ icon: Icon, label, value }) => (
             <div key={label} className="flex gap-4 rounded-xl border border-border bg-card p-5">

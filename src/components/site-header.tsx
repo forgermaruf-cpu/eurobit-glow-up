@@ -26,12 +26,12 @@ export function SiteHeader() {
             <a href="mailto:info@eurobit.online" className="hidden min-w-0 items-center gap-2 hover:text-secondary sm:inline-flex">
               <Mail className="size-3.5 shrink-0 text-secondary" /> <span className="truncate">info@eurobit.online</span>
             </a>
-            <a href="tel:+924235710000" className="hidden shrink-0 items-center gap-2 hover:text-secondary md:inline-flex">
-              <Phone className="size-3.5 text-secondary" /> +92 42 3571 0000
+            <a href="tel:+923139544444" className="hidden shrink-0 items-center gap-2 hover:text-secondary md:inline-flex">
+              <Phone className="size-3.5 text-secondary" /> 0313 9544444
             </a>
           </div>
           <div className="flex shrink-0 items-center gap-3">
-            <a href="tel:+924235710000" aria-label="Call Eurobit" className="hover:text-secondary sm:hidden"><Phone className="size-4" /></a>
+            <a href="tel:+923139544444" aria-label="Call Eurobit" className="hover:text-secondary sm:hidden"><Phone className="size-4" /></a>
             <a
               href="https://wa.me/923139544444?text=Hello%20Eurobit!%20I%20would%20like%20to%20inquire%20about%20your%20waterproofing%20products."
               target="_blank"
