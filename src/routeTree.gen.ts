@@ -19,6 +19,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsSlugRouteImport } from './routes/products.$slug'
+import { Route as NewsSlugRouteImport } from './routes/news.$slug'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
 import { Route as AuthenticatedAdminSettingsRouteImport } from './routes/_authenticated/admin.settings'
@@ -75,6 +76,11 @@ const ProductsSlugRoute = ProductsSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => ProductsRoute,
 } as any)
+const NewsSlugRoute = NewsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => NewsRoute,
+} as any)
 const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
   id: '/admin',
   path: '/admin',
@@ -115,10 +121,11 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/location': typeof LocationRoute
-  '/news': typeof NewsRoute
+  '/news': typeof NewsRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/admin': typeof AuthenticatedAdminRouteWithChildren
+  '/news/$slug': typeof NewsSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/admin/inquiries': typeof AuthenticatedAdminInquiriesRoute
   '/admin/posts': typeof AuthenticatedAdminPostsRoute
@@ -132,9 +139,10 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/location': typeof LocationRoute
-  '/news': typeof NewsRoute
+  '/news': typeof NewsRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/news/$slug': typeof NewsSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/admin/inquiries': typeof AuthenticatedAdminInquiriesRoute
   '/admin/posts': typeof AuthenticatedAdminPostsRoute
@@ -150,10 +158,11 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/location': typeof LocationRoute
-  '/news': typeof NewsRoute
+  '/news': typeof NewsRouteWithChildren
   '/products': typeof ProductsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRouteWithChildren
+  '/news/$slug': typeof NewsSlugRoute
   '/products/$slug': typeof ProductsSlugRoute
   '/_authenticated/admin/inquiries': typeof AuthenticatedAdminInquiriesRoute
   '/_authenticated/admin/posts': typeof AuthenticatedAdminPostsRoute
@@ -173,6 +182,7 @@ export interface FileRouteTypes {
     | '/products'
     | '/sitemap.xml'
     | '/admin'
+    | '/news/$slug'
     | '/products/$slug'
     | '/admin/inquiries'
     | '/admin/posts'
@@ -189,6 +199,7 @@ export interface FileRouteTypes {
     | '/news'
     | '/products'
     | '/sitemap.xml'
+    | '/news/$slug'
     | '/products/$slug'
     | '/admin/inquiries'
     | '/admin/posts'
@@ -207,6 +218,7 @@ export interface FileRouteTypes {
     | '/products'
     | '/sitemap.xml'
     | '/_authenticated/admin'
+    | '/news/$slug'
     | '/products/$slug'
     | '/_authenticated/admin/inquiries'
     | '/_authenticated/admin/posts'
@@ -222,7 +234,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
   LocationRoute: typeof LocationRoute
-  NewsRoute: typeof NewsRoute
+  NewsRoute: typeof NewsRouteWithChildren
   ProductsRoute: typeof ProductsRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -299,6 +311,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsSlugRouteImport
       parentRoute: typeof ProductsRoute
     }
+    '/news/$slug': {
+      id: '/news/$slug'
+      path: '/$slug'
+      fullPath: '/news/$slug'
+      preLoaderRoute: typeof NewsSlugRouteImport
+      parentRoute: typeof NewsRoute
+    }
     '/_authenticated/admin': {
       id: '/_authenticated/admin'
       path: '/admin'
@@ -374,6 +393,16 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
+interface NewsRouteChildren {
+  NewsSlugRoute: typeof NewsSlugRoute
+}
+
+const NewsRouteChildren: NewsRouteChildren = {
+  NewsSlugRoute: NewsSlugRoute,
+}
+
+const NewsRouteWithChildren = NewsRoute._addFileChildren(NewsRouteChildren)
+
 interface ProductsRouteChildren {
   ProductsSlugRoute: typeof ProductsSlugRoute
 }
@@ -393,7 +422,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
   LocationRoute: LocationRoute,
-  NewsRoute: NewsRoute,
+  NewsRoute: NewsRouteWithChildren,
   ProductsRoute: ProductsRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
