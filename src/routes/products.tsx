@@ -1,8 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useSuspenseQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { products, productCategories } from "@/lib/products";
+import fallbackImg from "@/assets/product-membrane.jpg";
+import { productCategories, productsQuery } from "@/lib/cms-queries";
 
 export const Route = createFileRoute("/products")({
+  loader: ({ context }) => context.queryClient.ensureQueryData(productsQuery),
   head: () => ({
     meta: [
       { title: "Products — Eurobit Waterproofing & Construction Chemicals" },
@@ -13,12 +16,15 @@ export const Route = createFileRoute("/products")({
       },
       { property: "og:title", content: "Eurobit Product Catalogue" },
       { property: "og:description", content: "APP/SBS membranes, admixtures, coatings and sealants." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ProductsPage,
 });
 
 function ProductsPage() {
+  const { data: products } = useSuspenseQuery(productsQuery);
   const [active, setActive] = useState<string>("All");
   const filtered = active === "All" ? products : products.filter((p) => p.category === active);
 
@@ -66,8 +72,8 @@ function ProductsPage() {
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-muted">
                 <img
-                  src={p.image}
-                  alt={p.imageAlt}
+                  src={p.image_url || fallbackImg}
+                  alt={p.image_alt || p.name}
                   loading="lazy"
                   width={800}
                   height={600}
