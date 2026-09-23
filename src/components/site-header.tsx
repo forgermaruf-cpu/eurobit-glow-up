@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle, Facebook, Youtube, Menu, X } from "lucide-react";
 import { Logo } from "./logo";
+import { useSettings } from "@/lib/use-settings";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,6 +14,7 @@ const nav = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const s = useSettings();
 
   return (
     <header className="sticky top-0 z-50 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
