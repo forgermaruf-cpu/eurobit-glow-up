@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { useSettings } from "@/lib/use-settings";
 
 export const Route = createFileRoute("/location")({
   head: () => ({
