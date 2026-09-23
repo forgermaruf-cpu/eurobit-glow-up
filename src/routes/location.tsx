@@ -15,6 +15,7 @@ export const Route = createFileRoute("/location")({
 });
 
 function Location() {
+  const s = useSettings();
   return (
     <>
       <section className="bg-primary text-primary-foreground">
