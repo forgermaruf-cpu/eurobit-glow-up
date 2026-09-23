@@ -82,10 +82,7 @@ function Contact() {
         </div>
 
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            setSent(true);
-          }}
+          onSubmit={onSubmit}
           className="rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)] sm:p-8"
         >
           {sent ? (
