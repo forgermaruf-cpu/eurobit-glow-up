@@ -19,6 +19,35 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const s = useSettings();
+  const send = useServerFn(submitInquiry);
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    const fd = new FormData(e.currentTarget);
+    const get = (k: string) => String(fd.get(k) ?? "").trim();
+    try {
+      await send({
+        data: {
+          name: get("name"),
+          company: get("company") || undefined,
+          email: get("email"),
+          phone: get("phone") || undefined,
+          location: get("location") || undefined,
+          message: get("message"),
+        },
+      });
+      setSent(true);
+    } catch {
+      setError("Sorry, the message could not be sent. Please try again or call us.");
+    } finally {
+      setBusy(false);
+    }
+  }
 
   return (
     <>
@@ -36,9 +65,9 @@ function Contact() {
       <section className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:grid-cols-[1fr_1.4fr]">
         <div className="space-y-4">
           {[
-            { icon: MapPin, label: "Visit", value: "Kot Lakhpat, Lahore — nationwide delivery" },
-            { icon: Phone, label: "Call", value: "0313 9544444" },
-            { icon: Mail, label: "Email", value: "info@eurobit.online" },
+            { icon: MapPin, label: "Visit", value: s.address },
+            { icon: Phone, label: "Call", value: s.phone },
+            { icon: Mail, label: "Email", value: s.email },
           ].map(({ icon: Icon, label, value }) => (
             <div key={label} className="flex gap-4 rounded-xl border border-border bg-card p-5">
               <div className="grid size-10 shrink-0 place-items-center rounded-md bg-secondary/10 text-secondary">
