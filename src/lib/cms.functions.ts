@@ -75,20 +75,30 @@ export const getSettings = createServerFn({ method: "GET" }).handler(
   },
 );
 
+const optionalText = (max: number) =>
+  z
+    .string()
+    .trim()
+    .max(max)
+    .optional()
+    .transform((v) => (v ? v : undefined));
+
 const inquirySchema = z.object({
-  name: z.string().min(1).max(200),
-  company: z.string().max(200).optional(),
-  email: z.string().email().max(200),
-  phone: z.string().max(60).optional(),
-  location: z.string().max(200).optional(),
-  message: z.string().min(1).max(5000),
-  product: z.string().max(200).optional(),
+  name: z.string().trim().min(2).max(120),
+  company: optionalText(160),
+  email: z.string().trim().email().max(254),
+  phone: optionalText(40),
+  location: optionalText(160),
+  message: z.string().trim().min(5).max(5000),
+  product: optionalText(160),
 });
 
 export const submitInquiry = createServerFn({ method: "POST" })
   .inputValidator((data: unknown) => inquirySchema.parse(data))
   .handler(async ({ data }) => {
-    const { error } = await publicClient().from("inquiries").insert(data);
+    const { error } = await publicClient()
+      .from("inquiries")
+      .insert({ ...data, status: "new" });
     if (error) throw new Error(error.message);
     return { ok: true };
   });
