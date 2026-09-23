@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle, Facebook, Youtube, Menu, X } from "lucide-react";
 import { Logo } from "./logo";
+import { useSettings } from "@/lib/use-settings";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -13,6 +14,7 @@ const nav = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const s = useSettings();
 
   return (
     <header className="sticky top-0 z-50 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
@@ -21,19 +23,19 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex min-w-0 flex-1 items-center gap-4 sm:gap-5">
             <span className="inline-flex shrink-0 items-center gap-2">
-              <MapPin className="size-3.5 shrink-0 text-secondary" /> Nationwide · Pakistan
+              <MapPin className="size-3.5 shrink-0 text-secondary" /> {s.coverage}
             </span>
-            <a href="mailto:info@eurobit.online" className="hidden min-w-0 items-center gap-2 hover:text-secondary sm:inline-flex">
-              <Mail className="size-3.5 shrink-0 text-secondary" /> <span className="truncate">info@eurobit.online</span>
+            <a href={`mailto:${s.email}`} className="hidden min-w-0 items-center gap-2 hover:text-secondary sm:inline-flex">
+              <Mail className="size-3.5 shrink-0 text-secondary" /> <span className="truncate">{s.email}</span>
             </a>
-            <a href="tel:+923139544444" className="hidden shrink-0 items-center gap-2 hover:text-secondary md:inline-flex">
-              <Phone className="size-3.5 text-secondary" /> 0313 9544444
+            <a href={`tel:${s.phone_link}`} className="hidden shrink-0 items-center gap-2 hover:text-secondary md:inline-flex">
+              <Phone className="size-3.5 text-secondary" /> {s.phone}
             </a>
           </div>
           <div className="flex shrink-0 items-center gap-3">
-            <a href="tel:+923139544444" aria-label="Call Eurobit" className="hover:text-secondary sm:hidden"><Phone className="size-4" /></a>
+            <a href={`tel:${s.phone_link}`} aria-label="Call Eurobit" className="hover:text-secondary sm:hidden"><Phone className="size-4" /></a>
             <a
-              href="https://wa.me/923139544444?text=Hello%20Eurobit!%20I%20would%20like%20to%20inquire%20about%20your%20waterproofing%20products."
+              href={s.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat with Eurobit on WhatsApp"

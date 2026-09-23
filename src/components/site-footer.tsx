@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Logo } from "./logo";
+import { useSettings } from "@/lib/use-settings";
 
 export function SiteFooter() {
+  const s = useSettings();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:grid-cols-4">
@@ -14,18 +16,18 @@ export function SiteFooter() {
             delivered nationwide.
           </p>
           <div className="mt-6 space-y-2 text-sm text-primary-foreground/80">
-            <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-secondary shrink-0" /> Industrial Estate, Kot Lakhpat, Lahore — serving all Pakistan</div>
-            <div className="flex items-center gap-3"><Mail className="size-4 text-secondary" /> info@eurobit.online</div>
-            <div className="flex items-center gap-3"><Phone className="size-4 text-secondary" /> <a href="tel:+923139544444" className="hover:text-secondary">0313 9544444</a></div>
+            <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-4 text-secondary shrink-0" /> {s.address} — serving {s.coverage}</div>
+            <div className="flex items-center gap-3"><Mail className="size-4 text-secondary" /> <a href={`mailto:${s.email}`} className="hover:text-secondary">{s.email}</a></div>
+            <div className="flex items-center gap-3"><Phone className="size-4 text-secondary" /> <a href={`tel:${s.phone_link}`} className="hover:text-secondary">{s.phone}</a></div>
             <div className="flex items-center gap-3">
               <MessageCircle className="size-4 text-secondary shrink-0" />
               <a
-                href="https://wa.me/923139544444?text=Hello%20Eurobit!%20I%20would%20like%20to%20inquire%20about%20your%20waterproofing%20products."
+                href={s.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-secondary"
               >
-                WhatsApp: +92 313 9544444
+                WhatsApp: {s.phone}
               </a>
             </div>
           </div>
