@@ -28,11 +28,11 @@ function Location() {
       <section className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:grid-cols-[1fr_1.4fr]">
         <div className="space-y-4">
           {[
-            { icon: MapPin, label: "Head Office & Factory", value: "Industrial Estate, Kot Lakhpat\nLahore, Pakistan" },
-            { icon: MapPin, label: "Delivery coverage", value: "All Pakistan — Punjab, Sindh, KPK,\nBalochistan, AJK & Gilgit-Baltistan" },
-            { icon: Phone, label: "Phone", value: "0313 9544444" },
-            { icon: Mail, label: "Email", value: "info@eurobit.online" },
-            { icon: Clock, label: "Hours", value: "Mon – Sat · 9:00 – 18:00" },
+            { icon: MapPin, label: "Head Office & Factory", value: s.address },
+            { icon: MapPin, label: "Delivery coverage", value: s.coverage },
+            { icon: Phone, label: "Phone", value: s.phone },
+            { icon: Mail, label: "Email", value: s.email },
+            { icon: Clock, label: "Hours", value: s.hours },
           ].map(({ icon: Icon, label, value }) => (
             <div key={label} className="flex gap-4 rounded-xl border border-border bg-card p-5">
               <div className="grid size-10 shrink-0 place-items-center rounded-md bg-secondary/10 text-secondary">
