@@ -114,11 +114,13 @@ function Contact() {
                   className="mt-2 w-full rounded-md border border-input bg-background p-3 text-sm outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20"
                 />
               </div>
+              {error && <p className="text-sm text-destructive">{error}</p>}
               <button
                 type="submit"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-8 py-4 text-sm font-bold uppercase tracking-widest text-secondary-foreground hover:brightness-110"
+                disabled={busy}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-8 py-4 text-sm font-bold uppercase tracking-widest text-secondary-foreground hover:brightness-110 disabled:opacity-60"
               >
-                <Send className="size-4" /> Send message
+                <Send className="size-4" /> {busy ? "Sending…" : "Send message"}
               </button>
             </div>
           )}
