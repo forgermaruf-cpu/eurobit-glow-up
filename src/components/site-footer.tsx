@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
 import { Logo } from "./logo";
+import { useSettings } from "@/lib/use-settings";
 
 export function SiteFooter() {
+  const s = useSettings();
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:grid-cols-4">
