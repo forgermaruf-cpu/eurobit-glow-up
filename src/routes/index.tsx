@@ -122,7 +122,7 @@ function Home() {
               params={{ slug: p.slug }}
               className="group flex flex-col rounded-xl border border-border bg-card p-3 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-muted">
+              <div className="aspect-[4/3] overflow-hidden rounded-md bg-muted">
                 <img
                   src={p.image}
                   alt={p.imageAlt}
@@ -131,12 +131,12 @@ function Home() {
                   height={600}
                   className="size-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute left-3 top-3 rounded-full bg-primary/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
-                  {p.category}
-                </div>
               </div>
               <div className="px-1 pb-1 pt-4">
-                <h3 className="font-display text-sm font-bold uppercase tracking-tight text-foreground group-hover:text-secondary">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-secondary">
+                  {p.category}
+                </div>
+                <h3 className="mt-1 font-display text-sm font-bold uppercase tracking-tight text-foreground group-hover:text-secondary">
                   {p.name}
                 </h3>
                 <p className="mt-1 line-clamp-2 text-xs text-muted-foreground">{p.tagline}</p>
