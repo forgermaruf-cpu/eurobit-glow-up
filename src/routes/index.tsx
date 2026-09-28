@@ -13,6 +13,10 @@ export const Route = createFileRoute("/")({
         content:
           "ISO 9001:2015 certified manufacturer of bitumen membranes, admixtures and protective coatings — supplied across Pakistan and trusted by Nestlé, Coca-Cola, Toyota and Lahore Airport.",
       },
+      { property: "og:title", content: "Eurobit — Waterproofing & Construction Chemicals, Pakistan" },
+      { property: "og:description", content: "Eurobit manufactures waterproofing membranes, admixtures and protective coatings for projects across Pakistan." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
