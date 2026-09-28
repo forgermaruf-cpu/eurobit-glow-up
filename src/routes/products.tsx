@@ -70,14 +70,14 @@ function ProductsPage() {
               params={{ slug: p.slug }}
               className="group flex flex-col rounded-xl border border-border bg-card p-3 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]"
             >
-              <div className="aspect-[4/3] overflow-hidden rounded-md bg-muted">
+              <div className={`${p.category === "Bitumen Membrane" ? "aspect-[4/3]" : "aspect-[4/5] sm:aspect-[4/3]"} overflow-hidden rounded-md bg-muted`}>
                 <img
                   src={p.image_url || fallbackImg}
                   alt={p.image_alt || p.name}
                   loading="lazy"
                   width={800}
                   height={600}
-                  className="size-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                  className="size-full object-contain p-1 transition-transform duration-500 group-hover:scale-105 sm:p-3"
                 />
               </div>
               <div className="px-1 pb-1 pt-4">
